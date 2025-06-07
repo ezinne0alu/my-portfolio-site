@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Ezinne Ogechukwu</title>
-  <link rel="stylesheet" href="style.css" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comic+Neue&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
     body {
@@ -20,7 +23,6 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-    
     }
 
     h1 {
@@ -32,9 +34,10 @@
       color: #f5828b;
       text-align: center;
     }
+
     h3 {
       color: #ff9e9e;
-      text-align: center; 
+      text-align: center;
     }
 
     p {
@@ -57,12 +60,47 @@
       margin-bottom: 10px;
       font-family: 'Comic Neue', cursive;
     }
+
+    nav a {
+      margin: 0 10px;
+      color: #ff5496;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .project {
+      background-color: rgba(255, 228, 242, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+      text-align: left;
+    }
+
+    .project h3 {
+      margin-top: 0;
+    }
+
+    .project a {
+      color: #ff5496;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Projects</h1>
-    <nav>
+    <h1 data-aos="fade-down">My Projects</h1>
+    <nav data-aos="fade-up" data-aos-delay="200">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -70,38 +108,45 @@
     </nav>
   </header>
 
-  <section class="projects">
+  <section class="projects" data-aos="fade-up" data-aos-delay="400">
     <h2>Things I've Built</h2>
 
-    <div class="project">
+    <div class="project" data-aos="fade-right" data-aos-delay="600">
       <h3>💻 FreeCodeCamp: Built a Personal Portfolio Webpage Project</h3>
       <p>This landing page was built using HTML, CSS, and JavaScript. It adapts beautifully across all devices and includes smooth animations.</p>
-      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage" target="_blank">My Project Link</a> |
+      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage" target="_blank" rel="noopener noreferrer">My Project Link</a>
     </div>
 
-    <div class="project">
+    <div class="project" data-aos="fade-left" data-aos-delay="800">
       <h3>🌙 Visual Studio: In Class Projects</h3>
-      <p>These are 2 projcets I made in my junior year of high school Computer Science Class which I earned A+'s on along with many others.</p>
-      <a href="https://github.com/ezinne0alu/Brenda-Fassie-vs-Yvonne-Chaka-Chaka-Visual-Studio-Project/blob/main/2README.md" target="_blank">Project 1</a> |
-      <a href="https://github.com/ezinne0alu/Michael-Jackson-Visual-Studio-Project/blob/main/README.md" target="_blank">Project 2</a>
+      <p>These are 2 projects I made in my junior year of high school Computer Science Class which I earned A+'s on along with many others.</p>
+      <a href="https://github.com/ezinne0alu/Brenda-Fassie-vs-Yvonne-Chaka-Chaka-Visual-Studio-Project/blob/main/2README.md" target="_blank" rel="noopener noreferrer">Project 1</a> |
+      <a href="https://github.com/ezinne0alu/Michael-Jackson-Visual-Studio-Project/blob/main/README.md" target="_blank" rel="noopener noreferrer">Project 2</a>
     </div>
 
-    <div class="project">
+    <div class="project" data-aos="fade-right" data-aos-delay="1000">
       <h3>📱 Personal Portfolio Site</h3>
       <p>The very site you’re browsing now! Built with HTML and CSS, it showcases my growth and creativity as a front-end developer.</p>
-      <a href="https://github.com/ezinne0alu/my-portfolio-site">View Code</a> |
-      <a href="https://ezinne0alu.github.io/my-portfolio-site/index.html" target="_blank">Live Site</a>
+      <a href="https://github.com/ezinne0alu/my-portfolio-site" target="_blank" rel="noopener noreferrer">View Code</a> | 
+      <a href="https://ezinne0alu.github.io/my-portfolio-site/index.html" target="_blank" rel="noopener noreferrer">Live Site</a>
     </div>
 
-    <!-- Add more project blocks like the ones above as you complete new projects -->
+    <!-- I'll add more projects later as I'm doing them -->
   </section>
 
-  <footer>
+  <footer data-aos="fade-in" data-aos-delay="1200">
     <p>© 2025 Ezinne Ogechukwu • Front-End Developer</p>
     <p>
-      <a href="https://github.com/ezinne0alu" target="_blank">GitHub</a> |
+      <a href="https://github.com/ezinne0alu" target="_blank" rel="noopener noreferrer">GitHub</a> |
       <a href="contact.html">Contact</a>
     </p>
   </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
