@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ezinne Ogechukwu's Personal Portfolio</title>
   
-  <!-- These are the fonts I used -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comic+Neue&display=swap" rel="stylesheet">
   
   <style>
@@ -15,78 +15,126 @@
       background-color: #ffdee4; 
       padding: 50px;
       text-align: center;
+      margin: 0;
     }
 
-    h1 {
-      font-family: 'Baloo 2', cursive;
-      color: #ff5496;
+    nav a {
+      color: #ff69b4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    p {
-      color: #f5828b;
+    nav a:hover {
+      color: #c71585;
     }
 
-    .background {
+    h1, h2, p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    /* When visible, fade in and move to normal position */
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .Introduction {
+      background-color: #fff0f5;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.2);
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .Introduction.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img {
+      border-radius: 15px;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
+    }
+
+    img.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    p.background {
       color: #f5828b; 
       text-align: left; 
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
-      h2{
-        color: #f5828b; 
-        text-align: center; 
-
-      }
 
     ul {
-    background-color: #ffe4f2; 
-    padding: 20px;
-    border-radius: 10px;
-  }
+      background-color: #ffe4f2; 
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    ul.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     li {
-    color: #ff69b4; 
-    margin-bottom: 10px;
-    font-family: 'Comic Neue', cursive;
-  }
-    .Introduction {
-  background-color: #fff0f5;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.2);
-  margin-bottom: 40px;
-}
-    a {
-  color: #ff69b4;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #c71585;
-}
-
-    .skills ul {
-  list-style: square inside;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
+      color: #ff69b4; 
+      margin-bottom: 10px;
+      font-family: 'Comic Neue', cursive;
+    }
 
     .cta-button {
-  display: inline-block;
-  background-color: #ff69b4;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+      display: inline-block;
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
 
-.cta-button:hover {
-  background-color: #c71585;
-}
+    .cta-button.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #f5828b;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    footer.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -94,52 +142,61 @@ a:hover {
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
-</html>
 
-<section class = "Introduction">
-  <h1>Hello, I'm Princess Ezinne Ogechukwu</h1>
-  <p>Welcome to my personal portfolio website. I'm a front-end developer passionate about creativity, code, and user experience.</p>
-  <div align="center">
-  <img src="Princess Yvonne Ogechukwu's cover.jpg" alt="My Profile Picture" width="300"/>
-  </div>
+  <section class="Introduction">
+    <h1>Hello, I'm Princess Ezinne Ogechukwu</h1>
+    <p>Welcome to my personal portfolio website. I'm a front-end developer passionate about creativity, code, and user experience.</p>
+    <div align="center">
+      <img src="Princess Yvonne Ogechukwu's cover.jpg" alt="My Profile Picture" width="300"/>
+    </div>
   </section>
 
-  <p class"background">
+  <p class="background">
     I am a West African front-end developer with a passion for incorporating unique designs and layouts for a personalized user experience.
-   With a foundation in graphic and web design, video editing, and content creation—built through both background knowledge and self-training, I strive to channel my creativity and skills into crafting standout digital experiences through front-end development.
+    With a foundation in graphic and web design, video editing, and content creation—built through both background knowledge and self-training, I strive to channel my creativity and skills into crafting standout digital experiences through front-end development.
   </p>
 
-<h2>
-  Bringing the soul of code to life
-</h2>
-<p>
-  I design, build, and love beautiful, responsive websites
-</p>
-<a href="projects.html" class="cta-button">Take a look at my work!</a>
+  <h2>Bringing the soul of code to life</h2>
+  <p>I design, build, and love beautiful, responsive websites</p>
+  <a href="projects.html" class="cta-button">Take a look at my work!</a>
 
-<section class="skills">
-  <h2>My Skills</h2>
-  <ul>
-    <li><strong>Coding Languages:</strong> HTML, CSS, JavaScript</li>
-    <li><strong>Frameworks:</strong> React, Git, GitHub</li>
-    <li>Responsive Web Design</li>
-    <li>Front-End Development Libraries</li>
-    <li>Data Visualization</li>
-    <li>JavaScript Algorithms and Data Structures</li>
-    <li>FreeCodeCamp Certified</li>
-  </ul>
-</section>
+  <section class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li><strong>Coding Languages:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Frameworks:</strong> React, Git, GitHub</li>
+      <li>Responsive Web Design</li>
+      <li>Front-End Development Libraries</li>
+      <li>Data Visualization</li>
+      <li>JavaScript Algorithms and Data Structures</li>
+      <li>FreeCodeCamp Certified</li>
+    </ul>
+  </section>
 
   <footer>
-    <p>
-      © 2025 Ezinne Ogechukwu • Front-End Developer
-    </p>
+    <p>© 2025 Ezinne Ogechukwu • Front-End Developer</p>
     <p><a href="https://github.com/ezinne0alu" target="_blank">GitHub</a></p>
-       <p><a href="contact.html">Contact</a></p>
+    <p><a href="contact.html">Contact</a></p>
   </footer>
+
+  <script>
+    // Animate on scroll - simple vanilla JS
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('h1, h2, p, ul, .Introduction, .cta-button, footer, img');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    // Trigger on page load
+    window.addEventListener('load', revealOnScroll);
+  </script>
 </body>
-  
-  
+</html>
