@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Ezinne Ogechukwu</title>
-  <link rel="stylesheet" href="style.css" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comic+Neue&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
     body {
@@ -34,17 +37,17 @@
 
     p {
       color: #f5828b;
-    }
-
-    .background {
-      color: #f5828b;
-      text-align: left;
+      max-width: 600px;
+      margin: 0 auto 20px;
     }
 
     ul {
       background-color: #ffe4f2;
       padding: 20px;
       border-radius: 10px;
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: left;
     }
 
     li {
@@ -52,12 +55,33 @@
       margin-bottom: 10px;
       font-family: 'Comic Neue', cursive;
     }
+
+    a {
+      color: #ff5496;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #ff5496;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Contact Me</h1>
-    <nav>
+    <h1 data-aos="fade-down">Contact Me</h1>
+    <nav data-aos="fade-up" data-aos-delay="200">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -65,26 +89,33 @@
     </nav>
   </header>
 
-  <section class="contact">
+  <section class="contact" data-aos="fade-up" data-aos-delay="400">
     <h2>Contact me!</h2>
-    <p>Have a question, want to collaborate, want to hire me for a project/company, you can contact me from the following platforms below!</p>
+    <p>Have a question, want to collaborate, or want to hire me for a project/company? You can contact me through the platforms below!</p>
 
     <ul>
-      <li>Email: <a href="ezinneogechukwu7@gmail.com">My email</a></li>
-      <li>GitHub: <a href="https://github.com/ezinne0alu" target="_blank">My Github</a></li>
-      <li>Youtube: <a href="https://www.youtube.com/@TheIPastelezii" target="_blank">My Youtube Channel</a></li>
+      <li>Email: <a href="mailto:ezinneogechukwu7@gmail.com">ezinneogechukwu7@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/ezinne0alu" target="_blank" rel="noopener noreferrer">My GitHub</a></li>
+      <li>YouTube: <a href="https://www.youtube.com/@TheIPastelezii" target="_blank" rel="noopener noreferrer">My YouTube Channel</a></li>
       <!-- I'll add more if I have time -->
     </ul>
 
     <p>Or leave a message on one of my projects and I’ll get back to you!</p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-in" data-aos-delay="600">
     <p>© 2025 Ezinne Ogechukwu • Front-End Developer</p>
     <p>
-      <a href="https://github.com/ezinne0alu" target="_blank">GitHub</a> |
+      <a href="https://github.com/ezinne0alu" target="_blank" rel="noopener noreferrer">GitHub</a> |
       <a href="index.html">Back to Home</a>
     </p>
   </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
