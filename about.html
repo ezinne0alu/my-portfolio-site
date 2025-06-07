@@ -8,6 +8,10 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comic+Neue&display=swap" rel="stylesheet" />
 
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
     body {
       font-family: 'Comic Neue', cursive;
@@ -51,13 +55,24 @@
       margin-bottom: 10px;
       font-family: 'Comic Neue', cursive;
     }
+
+    nav a {
+      margin: 0 10px;
+      color: #ff5496;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>About Me</h1>
-    <nav>
+    <h1 data-aos="fade-down">About Me</h1>
+    <nav data-aos="fade-up" data-aos-delay="200">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -65,28 +80,35 @@
     </nav>
   </header>
 
-  <section class="about">
+  <section class="about" data-aos="fade-up" data-aos-delay="400">
     <h2>Hello! I'm Ezinne.</h2>
-    <div align="center">
-  <img src="Beautiful Ezinne 2 edited.jpg.jpg" alt="Another Picture of Me" width="300"/>
-  </div>
-    <p>
+    <div align="center" data-aos="zoom-in" data-aos-delay="600">
+      <img src="Beautiful Ezinne 2 edited.jpg.jpg" alt="Another Picture of Me" width="300"/>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="800">
       I'm a creative and passionate front-end developer with a love for design, storytelling, and code. My journey began when I was in middle school in Ghana, where I stood out for my tech skills. Now, I've earned certifications from FreeCodeCamp, maintained a 3.6 GPA, and built projects through GitHub and YouTube.
     </p>
-    <p>
+    <p data-aos="fade-up" data-aos-delay="1000">
       My mission is to bring the soul of creativity into technology. I’m constantly learning and growing in HTML, CSS, JavaScript and React, while nurturing a creative life that fuels my code.
     </p>
-    <p>
+    <p data-aos="fade-up" data-aos-delay="1200">
       This page is a window into the core essence behind the work I do.
     </p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-in" data-aos-delay="1400">
     <p>© 2025 Ezinne Ogechukwu • Front-End Developer</p>
     <p>
       <a href="https://github.com/ezinne0alu" target="_blank">GitHub</a> |
       <a href="contact.html">Contact</a>
     </p>
   </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
